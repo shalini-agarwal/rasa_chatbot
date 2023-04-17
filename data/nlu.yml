@@ -6,38 +6,25 @@ nlu:
     - hey
     - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
     - bye
     - goodbye
 
 - intent: affirm
   examples: |
     - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - yes, it was good
+    - it was good
+    - i enjoyed learning
 
 - intent: deny
   examples: |
     - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
     - not really
 
-- intent: 
+- intent: answer_module_about
+  examples: |
+    - [Identity theft is the illegal use of your personal information for fraudulent purposes, like credit applications, fake tax filings, or unauthorized medical services. It can harm your credit and require time and money to rectify](user_answer)
+  

@@ -1,36 +1,40 @@
 version: "3.1"
 
+entities:
+  - user_answer
+
+slots:
+  user_answer:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user_answer
+
 intents:
   - greet
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - answer_module_about
 
 responses:
   utter_greet:
   - text: "Hey! How are you today?"
 
-  utter_ask_module:
-  - text: "Did you understand about identity theft?"
+  utter_ask_opinion:
+  - text: "Did you like the training module on ID theft?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_ask_module:
+  - text: "Could you share what you understand by ID theft?"
 
   utter_did_that_help:
   - text: "Did that help you?"
 
-  utter_happy:
-  - text: "Great, carry on!"
-
   utter_goodbye:
   - text: "Bye"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+actions:
+  - action_extract_answer
 
 session_config:
   session_expiration_time: 60

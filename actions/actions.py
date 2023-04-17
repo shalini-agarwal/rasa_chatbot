@@ -25,3 +25,24 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+
+
+from typing import Any, Text, Dict, List
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class ActionExtractAnswer(Action):
+
+    def name(self) -> Text:
+        return "action_extract_answer"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        answer = tracker.get_slot('user_answer')
+        dispatcher.utter_message(text=answer)
+
+        return []
