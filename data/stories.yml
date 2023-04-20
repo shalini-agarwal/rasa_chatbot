@@ -3,7 +3,32 @@ version: "3.1"
 stories:
 
 
-- story: module opinion
+# - story: module opinion 
+#   steps:
+#   - intent: greet
+#   - action: utter_ask_opinion
+#   - intent: affirm
+#   - action: utter_ask_module
+
+# - story: module about
+#   steps:
+#   - intent: answer_module_about
+#   - action: action_extract_answer
+#   - intent: affirm
+#   - action: utter_ask_personal_experience
+
+# - story: module experience positive
+#   steps:
+#   - intent: answer_user_exp
+#   - action: utter_affirmation
+
+# - story: module experience negative
+#   steps:
+#   - intent: deny
+#   - action: utter_share_example
+
+
+- story: module opinion 
   steps:
   - intent: greet
   - action: utter_ask_opinion
@@ -11,5 +36,12 @@ stories:
   - action: utter_ask_module
   - intent: answer_module_about
   - action: action_extract_answer
+  - action: utter_ask_personal_experience
+  - intent: answer_user_exp
+  - action: utter_affirmation
 
-
+- story: module experience path 2
+  steps:
+  - action: utter_ask_personal_experience
+  - intent: deny
+  - action: utter_share_example

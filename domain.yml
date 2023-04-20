@@ -1,14 +1,20 @@
 version: "3.1"
 
 entities:
-  - user_answer
+  - use_type
+  - info_type
 
 slots:
-  user_answer:
+  use_type:
     type: text
     mappings:
     - type: from_entity
-      entity: user_answer
+      entity: use_type
+  info_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: info_type
 
 intents:
   - greet
@@ -16,6 +22,7 @@ intents:
   - affirm
   - deny
   - answer_module_about
+  - answer_user_exp
 
 responses:
   utter_greet:
@@ -27,11 +34,23 @@ responses:
   utter_ask_module:
   - text: "Could you share what you understand by ID theft?"
 
+  utter_ask_personal_experience:
+  - text: "Can you relate this to any real life happening in recent past?"
+
+  utter_share_example:
+  - text: "Okay, I can share one example for you to make it easier. I am a Bot but I have heard stories where people were fished into buying stuff from an illegimate website and lost 100s of dollars"
+
   utter_did_that_help:
   - text: "Did that help you?"
 
+  utter_affirmation:
+  - text: "Okay, I see."
+
   utter_goodbye:
   - text: "Bye"
+
+  utter_correct:
+  - text: "Yes that is correct!"
 
 actions:
   - action_extract_answer

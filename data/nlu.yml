@@ -18,6 +18,8 @@ nlu:
     - yes, it was good
     - it was good
     - i enjoyed learning
+    - thanks
+    - okay
 
 - intent: deny
   examples: |
@@ -26,5 +28,14 @@ nlu:
 
 - intent: answer_module_about
   examples: |
-    - [Identity theft is the illegal use of your personal information for fraudulent purposes, like credit applications, fake tax filings, or unauthorized medical services. It can harm your credit and require time and money to rectify](user_answer)
-  
+    - identity theft is the [illegal use] (use_type) of your [personal information](info_type) for fraudulent purposes
+    - identity theft involves someone [stealing](use_type) your [personal information](info_type) to commit fraud
+    - identity theft occurs when someone [misuses](use_type) your [personal information](info_type)
+    - identity theft is when someone [illicitly](use_type) uses your [personal information](info_type) for fraudulent activities
+    - identity theft refers to the [unauthorized](use_type) use of your [personal information](info_type) for fraudulent purposes
+    - identity theft is when someone [steals](use_type) your [personal information] for fraud
+
+
+- intent: answer_user_exp
+  examples: |
+   - I was fished into inputing my credit card details on a fraud site

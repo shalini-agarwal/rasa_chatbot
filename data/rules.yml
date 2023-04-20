@@ -6,3 +6,30 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+
+# - rule: ask module opinion
+#   steps:
+#   - intent: greet
+#   - action: utter_ask_opinion
+
+# - rule: ask module about
+#   steps:
+#   - intent: affirm
+#   - action: utter_ask_module
+
+# - rule: validate module about
+#   steps:
+#   - intent: answer_module_about
+#   - action: action_extract_answer
+
+# - rule: ask module experience positive
+#   steps:
+#   - action: utter_ask_personal_experience
+#   - intent: answer_user_exp
+#   - action: utter_affirmation
+
+# - rule: ask module experience negative
+#   steps:
+#   - intent: deny
+#   - action: utter_share_example
+
