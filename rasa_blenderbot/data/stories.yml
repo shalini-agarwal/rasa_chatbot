@@ -2,29 +2,100 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: feedback path 1a_i
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_ask_for_feedback
+  - intent: affirm
+  - action: utter_get_positive_feedback
+  - intent: user_feedback
+  - action: utter_happy
+  - action: utter_ask_relevance
+  - intent: affirm
+  - action: utter_ask_effectiveness
   - intent: affirm
   - action: utter_happy
 
-- story: sad path 2
+- story: feedback path 1a_ii
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_ask_for_feedback
+  - intent: affirm
+  - action: utter_get_positive_feedback
+  - intent: user_feedback
+  - action: utter_happy
+  - action: utter_ask_relevance
+  - intent: affirm
+  - action: utter_ask_effectiveness
   - intent: deny
-  - action: utter_goodbye
+  - action: utter_accept_feedback
+
+- story: feedback path 1b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_ask_for_feedback
+  - intent: affirm
+  - action: utter_get_positive_feedback
+  - intent: user_feedback
+  - action: utter_happy
+  - action: utter_ask_relevance
+  - intent: deny
+  - action: utter_accept_feedback
+
+- story: feedback path 2a_i
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_ask_for_feedback
+  - intent: deny
+  - action: utter_get_negative_feedback
+  - intent: user_feedback
+  - action: utter_accept_feedback
+  - action: utter_ask_relevance
+  - intent: affirm
+  - action: utter_ask_effectiveness
+  - intent: affirm
+  - action: utter_happy
+
+- story: feedback path 2a_ii
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_ask_for_feedback
+  - intent: deny
+  - action: utter_get_negative_feedback
+  - intent: user_feedback
+  - action: utter_accept_feedback
+  - action: utter_ask_relevance
+  - intent: affirm
+  - action: utter_ask_effectiveness
+  - intent: deny
+  - action: utter_accept_feedback
+
+- story: feedback path 2b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_ask_for_feedback
+  - intent: deny
+  - action: utter_get_negative_feedback
+  - intent: user_feedback
+  - action: utter_accept_feedback
+  - action: utter_ask_relevance
+  - intent: deny
+  - action: utter_accept_feedback

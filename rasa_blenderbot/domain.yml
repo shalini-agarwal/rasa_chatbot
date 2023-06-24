@@ -6,9 +6,9 @@ intents:
   - affirm
   - deny
   - mood_great
-  - mood_unhappy
   - bot_challenge
   - chitchat
+  - user_feedback
 
 actions:
   - action_default_fallback
@@ -17,21 +17,32 @@ responses:
   utter_greet:
   - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "That's good to know!"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_ask_for_feedback:
+  - text: "Did you like the training module on identity theft?"
+
+  utter_get_positive_feedback:
+  - text: "What did you like about the module?"
+
+  utter_get_negative_feedback:
+  - text: "Oh! I am sorry about that. What didn't you like about the module?"
+
+  utter_accept_feedback:
+  - text: "Okay. Thanks for your feedback. We will work towards improving that."
+
+  utter_ask_relevance:
+  - text: "Do you think learning about identity theft was needed and helpful?"
+
+  utter_ask_effectiveness:
+  - text: "Do you think you can effectively use the strategies learned?"
 
 session_config:
   session_expiration_time: 60

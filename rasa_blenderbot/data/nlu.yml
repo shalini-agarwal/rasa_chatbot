@@ -9,9 +9,7 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
     - hey there
-    - let's go
     - hey dude
     - goodmorning
     - goodevening
@@ -19,9 +17,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
     - good night
     - bye
     - goodbye
@@ -36,52 +31,44 @@ nlu:
     - y
     - indeed
     - of course
-    - that sounds good
-    - correct
+    - yes it was good
+    - yes i think so. it helped me to be more thoughtful about my personally identifiable information
+    - yes it was helpful enough
+    - yes i think i can protect myself with the help of practice
+    - yes the practice helps
+    - yeah
+    - yeah i found it fun
+    - yes it was interesting
+    - yes it is important to learn about these things  
+    - yes it is definitely required
+    - yes it is required
+    - yes they were helpful
+    - i guess i can
 
 - intent: deny
   examples: |
     - no
     - n
-    - never
-    - I don't think so
+    - i don't think so
     - don't like that
     - no way
     - not really
+    - na
+    - no i hope to learn more than this
+    - no i learned nothing new
+    - no i hope to have more practice sessions
+    - not much
+    - it wasn't good
+    - it wasn't that good
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - i am good
+    - i feel good
+    - i am doing great
+    - pretty solid
+    - i feel great
+    - i am happy
 
 - intent: bot_challenge
   examples: |
@@ -122,3 +109,11 @@ nlu:
     - you should learn to count
     - you will know it from the single red rose it carries between its teeth
     - you're a woman
+  
+- intent: user_feedback
+  examples: |
+    - the explanation was good
+    - the avatars are fun
+    - the explanation wasn't descriptive
+    - i can't find my avatar
+    - i didn't understand the concept

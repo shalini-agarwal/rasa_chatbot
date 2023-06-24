@@ -16,11 +16,3 @@ rules:
   steps:
   - intent: chitchat
   - action: action_default_fallback
-
-- rule: Continue chitchat on affirm/deny
-  steps:
-  - action: action_default_fallback
-  - or: 
-    - intent: affirm
-    - intent: deny
-  - action: action_default_fallback
