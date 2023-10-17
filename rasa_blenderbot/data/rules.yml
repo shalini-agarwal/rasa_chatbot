@@ -2,10 +2,22 @@ version: "3.1"
 
 rules:
 
+# - rule: welcome user
+#   conversation_start: true  # this rule only applies at the beginning of a conversation
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+# - rule: restart the conversation when user sayd HI anytime during the conversation
+#   steps: 
+#   - intent: greet
+#   - action: action_restart
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
+  - action: action_restart
 
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
@@ -15,4 +27,9 @@ rules:
 - rule: Handle chitchat with Blenderbot action
   steps:
   - intent: chitchat
-  - action: action_default_fallback
+  - action: action_blenderbot
+
+- rule: Handle bad mood with Blenderbot action
+  steps:
+  - intent: mood_bad
+  - action: action_blenderbot

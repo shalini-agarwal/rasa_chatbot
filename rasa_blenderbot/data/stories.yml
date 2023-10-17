@@ -18,6 +18,7 @@ stories:
   - action: utter_ask_effectiveness
   - intent: affirm
   - action: utter_happy
+  - checkpoint: check_user_feedback
 
 - story: feedback path 1a_ii
   steps:
@@ -35,6 +36,7 @@ stories:
   - action: utter_ask_effectiveness
   - intent: deny
   - action: utter_accept_feedback
+  - checkpoint: check_user_feedback
 
 - story: feedback path 1b
   steps:
@@ -50,6 +52,7 @@ stories:
   - action: utter_ask_relevance
   - intent: deny
   - action: utter_accept_feedback
+  - checkpoint: check_user_feedback
 
 - story: feedback path 2a_i
   steps:
@@ -67,6 +70,7 @@ stories:
   - action: utter_ask_effectiveness
   - intent: affirm
   - action: utter_happy
+  - checkpoint: check_user_feedback
 
 - story: feedback path 2a_ii
   steps:
@@ -84,6 +88,7 @@ stories:
   - action: utter_ask_effectiveness
   - intent: deny
   - action: utter_accept_feedback
+  - checkpoint: check_user_feedback
 
 - story: feedback path 2b
   steps:
@@ -99,3 +104,30 @@ stories:
   - action: utter_ask_relevance
   - intent: deny
   - action: utter_accept_feedback
+  - checkpoint: check_user_feedback
+
+- story: understanding path 1
+  steps:
+  - checkpoint: check_user_feedback
+  - action: utter_ask_id_theft_understanding
+  - intent: user_understanding_ID_theft
+  - action: utter_ask_confidence
+  - intent: affirm
+  - action: utter_ask_past_experience
+  - intent: user_past_scamming_experience
+  - action: utter_happy
+  - action: utter_goodbye
+  - action: action_restart
+
+- story: understanding path 2
+  steps:
+  - checkpoint: check_user_feedback
+  - action: utter_ask_id_theft_understanding
+  - intent: user_understanding_ID_theft
+  - action: utter_ask_confidence
+  - intent: deny
+  - action: utter_ask_past_experience
+  - intent: user_past_scamming_experience
+  - action: utter_happy
+  - action: utter_goodbye
+  - action: action_restart

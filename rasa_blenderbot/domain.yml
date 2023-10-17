@@ -9,9 +9,12 @@ intents:
   - bot_challenge
   - chitchat
   - user_feedback
+  - mood_bad
+  - user_understanding_ID_theft
+  - user_past_scamming_experience
 
 actions:
-  - action_default_fallback
+  - action_blenderbot
   
 responses:
   utter_greet:
@@ -21,7 +24,7 @@ responses:
   - text: "That's good to know!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Thank you for your time! Have a good day!"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -43,6 +46,21 @@ responses:
 
   utter_ask_effectiveness:
   - text: "Do you think you can effectively use the strategies learned?"
+
+  utter_ask_id_theft_understanding:
+  - text: "What do you know about identity theft?"
+
+  utter_ask_confidence:
+  - text: "Okay. Do you feel more confident about recognizing scam emails and message?"
+
+  utter_ask_past_experience:
+  - text: "Okay. Do you want to share any recent experience you faced around this?"
+
+  utter_assurance:
+  - text: "I hope you were able to learn about identity theft from this training and will be better at identifying such scams in future."
+
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
 
 session_config:
   session_expiration_time: 60

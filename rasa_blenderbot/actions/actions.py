@@ -63,7 +63,7 @@ def get_last_messages(events: List[Dict]) -> List[Text]:
 
         if (
             item['event'] == 'action' and
-            item['name'] == ACTION_DEFAULT_FALLBACK_NAME
+            item['name'] == 'action_blenderbot'
         ):
             fallback_flag = True
 
@@ -94,7 +94,7 @@ class ActionBlenderbotTalker(Action):
         )
 
     def name(self) -> Text:
-        return ACTION_DEFAULT_FALLBACK_NAME
+        return 'action_blenderbot'
 
     def run(
         self, 

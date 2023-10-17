@@ -24,6 +24,8 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - stop
+    - end the conversation
 
 - intent: affirm
   examples: |
@@ -44,6 +46,46 @@ nlu:
     - yes it is required
     - yes they were helpful
     - i guess i can
+    - yes i should be able to
+    - definitely
+    - yes enjoyed it
+    - yes found it helpful
+    - yes it was quite informative
+    - yes appreciated it
+    - yes needed and helpful
+    - definitely beneficial
+    - absolutely necessary
+    - really important to know
+    - very helpful information
+    - crucial and useful
+    - absolutely needed it
+    - incredibly valuable
+    - extremely beneficial
+    - definitely worth learning
+    - highly necessary
+    - really glad I learned it
+    - truly helpful knowledge
+    - absolutely essential
+    - very informative and needed
+    - definitely a good choice
+    - really important to understand
+    - highly beneficial learning
+    - absolutely worth it
+    - incredibly helpful content
+    - absolutely, i believe in myself
+    - yes, i feel sure of myself
+    - yeah, i feel self-assured
+    - definitely, i have enough confidence
+    - sure, i feel capable
+    - indeed, i'm feeling confident
+    - yes, i have been a victim in the past 
+    - yes, the module taught me new things
+    - definitely, it builds your concept against disinformation
+    - i am getting there, not completely
+    - i do
+    - i think i can
+    - i believe it was
+    - i agree
 
 - intent: deny
   examples: |
@@ -60,6 +102,29 @@ nlu:
     - not much
     - it wasn't good
     - it wasn't that good
+    - nooo
+    - i don't know about that
+    - can't say
+    - no not really needed
+    - wasn't very helpful
+    - not necessary at all
+    - didn't find it useful
+    - not worth learning
+    - wasn't beneficial
+    - not helpful to me
+    - didn't see the need
+    - found it unhelpful
+    - wasn't required for me
+    - not valuable knowledge
+    - didn't think it was needed
+    - wasn't really necessary
+    - not a helpful topic
+    - didn't benefit from it
+    - found it irrelevant
+    - not worth the time
+    - didn't see the use
+    - wasn't beneficial to me
+    - didn't feel it was helpful
 
 - intent: mood_great
   examples: |
@@ -69,6 +134,20 @@ nlu:
     - pretty solid
     - i feel great
     - i am happy
+    - good
+    - doing good
+    - doing great
+    - i am okay
+
+- intent: mood_bad
+  examples: |
+    - i am not good
+    - i feel bad
+    - i feel awful
+    - i am doing great
+    - unwell
+    - i am sad
+    - bad
 
 - intent: bot_challenge
   examples: |
@@ -112,8 +191,90 @@ nlu:
   
 - intent: user_feedback
   examples: |
+    - it was informative
+    - i learned new things
     - the explanation was good
     - the avatars are fun
     - the explanation wasn't descriptive
+    - it was comprehensive
+    - it was too long
     - i can't find my avatar
+    - it was boring
     - i didn't understand the concept
+    - the modules weren't engaging
+    - i liked how it taught
+    - the content was good
+    - easy to follow
+    - interactive and engaging
+    - helpful examples
+    - clear explanations
+    - user-friendly layout
+    - practical exercises
+    - great visuals
+    - well paced
+    - real-life scenarios
+    - useful tips
+    - too lengthy
+    - disorganized content
+    - no interactivity
+    - lack of examples
+    - confusing explanations
+    - difficult to navigate
+    - repetitive assessments
+    - poor audio quality
+    - no peer interaction
+    - outdated information
+    - no mobile version
+    - technical issues
+    - limited hands-on practice
+    - too theoretical
+    - missed topics
+    - lack of updates
+    - unclear learning path
+    - incomplete feedback
+    - it was easy to understand.
+    - learned a lot
+    - beneficial content
+    - well explained
+    - engaging topics
+    - practical advice
+    - valuable insights
+    - great explanations
+    - useful examples
+    - clear instructions
+    - user-friendly format
+    - covered key points
+    - enjoyable learning
+    - relevant information
+    - eye-opening content
+    - valuable knowledge
+
+- intent: user_understanding_ID_theft
+  examples: |
+    - i discovered the tricks scammers use and how to recognize them. I also learned how to tell apart scams from real information. Additionally, I know how to keep my personal information safe from scammers
+    - i found out about the sneaky tactics scammers use and ways to identify them. I can now differentiate between scams and trustworthy information. Moreover, I know how to safeguard my personal details from scammers
+    - i got to know the methods scammers use to deceive people, and how to spot those tactics. I also learned how to tell if something is a scam or not. Plus, I learned how to protect my personal information from scammers
+    - i learned all about the ways scammers try to trick us and how to spot their tricks. I now know how to distinguish scams from legitimate stuff. I also learned how to keep my personal information safe from scammers
+    - i gained knowledge about the techniques scammers employ and how to identify those techniques. I can now differentiate between scams and genuine information. Additionally, I learned how to safeguard my personal information from scammers
+    - identity theft happens when someone takes your personal information to use it for their own gain and to do dishonest things
+    - identity theft occurs when someone steals your personal information for their own advantage and to engage in wrongdoing
+    - in simple terms, identity theft is when someone steals your personal information to use it for their own purposes and to do bad things
+    - when a person takes your personal information to benefit themselves and engage in deceitful actions, that's what we call identity theft
+    - identity theft is when someone gets hold of your personal information to exploit it for their own benefits and for engaging in fraudulent activities
+
+- intent: user_past_scamming_experience
+  examples: |
+    - I received an urgent email from my bank, stating that my account had been compromised. The email looked official, and I clicked on the link to verify my information. I provided my Social Security number and other personal details. Soon after, my identity was stolen, and fraudulent accounts were opened in my name.
+    - I applied for a job online and received an offer that seemed too good to be true. The company asked for a copy of my passport and driver's license for "verification purposes." I sent the documents, only to discover that the job offer was a scam, and my personal information was misused for identity theft.
+    - I received a call from someone claiming to be from a reputable tech support company. They said my computer had been hacked and needed immediate attention. In my panic, I shared my computer screen and allowed them access. They gained access to sensitive personal information and used it for identity theft.
+    - I got a call from someone claiming to be from the IRS, saying I owed back taxes and would face legal consequences if I didn't pay immediately. Fearful, I provided my Social Security number and bank account information over the phone. It turned out to be a scam, and my identity was compromised.
+    - I received a notice from a company I had an account with, informing me of a data breach. They said my personal information, including my Social Security number, had been exposed. Soon after, I discovered fraudulent accounts and credit card charges in my name, all because of the data breach.
+    - Someone impersonated me on social media, using my name and photos to create a fake profile. They reached out to my friends, asking for personal information and even money. My friends were shocked, and it took a while to clear my name and report the impersonation.
+    - trash to retrieve bank statements or tax documents
+    - installing skimmers at ATM machines, cash registers, and fuel pumps to digitally steal information from your bank card
+    - personal information from your phone when you use public Wi-Fi
+    - phishing to get information from you through fraudulent email, texts, or phone calls
+    - looking through your social media accounts to find identifying information in posts or photos
+    - ask you for personal information in online quizzes and surveys
+    - fraudulently obtain refunds or credits
+    - open fraudulent bank and credit accounts
